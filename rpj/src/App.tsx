@@ -1,10 +1,7 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Main from "./pages";
 
 function App() {
-  return <Main />;
+  return <h1>This is the app</h1>;
 }
 
 export default App;
