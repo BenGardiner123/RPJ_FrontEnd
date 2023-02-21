@@ -1,13 +1,25 @@
 <template>
   <v-app-bar flat>
-    <v-app-bar-title>
-      <v-icon icon="mdi-circle-slice-6" />
-
-      Essentials Preset
+    <!-- add a style tag -->
+    <v-app-bar-title class="text-h5 font-weight-medium">
+      .RANDOMPROJECTGENERATOR()
     </v-app-bar-title>
   </v-app-bar>
 </template>
 
 <script lang="ts" setup>
-  //
+//
 </script>
+
+<!-- add style -->
+<style scoped>
+@font-face {
+  font-family: "Permanent Marker";
+  src: url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+}
+.v-app-bar {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: "Permanent Marker", cursive;
+}
+</style>
