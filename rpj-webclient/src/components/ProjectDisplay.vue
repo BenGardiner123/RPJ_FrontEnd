@@ -2,19 +2,15 @@
   <div class="project-display-container">
     <div class="project-section">
       <h3>Front End:</h3>
-      <img src="https://img.icons8.com/officel/80/null/react.png" />
+      <v-icon class="tech-icon">{{ icons.angular }}</v-icon>
     </div>
     <div class="project-section">
       <h3>Middle/API:</h3>
-      <!-- <v-icon class="tech-icon">{{ middleApiIcon }}</v-icon> -->
-      <img src="https://img.icons8.com/color/48/null/net-framework.png" />
+      <v-icon class="tech-icon">{{ icons.vue }}</v-icon>
     </div>
     <div class="project-section">
       <h3>Back End:</h3>
-      <!-- <v-icon class="tech-icon">{{ backEndIcon }}</v-icon> -->
-      <img
-        src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-sql-mobile-app-development-flaticons-lineal-color-flat-icons.png"
-      />
+      <Icon icon="ant-design:console-sql-outlined" />
     </div>
     <div class="project-description">
       <p>{{ projectDescription }}</p>
@@ -23,8 +19,12 @@
 </template>
 
 <script>
+import { Icon } from "@iconify/vue";
 export default {
   name: "ProjectDisplay",
+  components: {
+    Icon,
+  },
   props: {
     frontEndIcon: {
       type: String,
@@ -43,6 +43,22 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      icons: {
+        vue: "mdi-vuejs",
+        react: "mdi-react",
+        angular: "mdi-angular",
+        node: "mdi-nodejs",
+        python: "mdi-language-python",
+        java: "mdi-language-java",
+        csharp: "mdi-language-csharp",
+        sql: "mdi-database",
+        mongo: "mdi-database",
+        firebase: "mdi-database",
+      },
+    };
+  },
 };
 </script>
 
@@ -51,8 +67,10 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 50px;
+  width: 60vw;
+  margin: auto;
 }
 
 .project-section {
@@ -60,6 +78,7 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  height: 100px;
 }
 
 .tech-icon {
