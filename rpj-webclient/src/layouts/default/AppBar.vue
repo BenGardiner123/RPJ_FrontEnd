@@ -13,13 +13,8 @@
 
 <!-- add style -->
 <style scoped>
-@font-face {
-  font-family: "Permanent Marker";
-  src: url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
-}
 .v-app-bar {
   background-color: #1e1e1e;
   color: #fff;
-  font-family: "Permanent Marker", cursive;
 }
 </style>
